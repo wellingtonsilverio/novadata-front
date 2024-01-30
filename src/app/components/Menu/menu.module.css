@@ -1,0 +1,59 @@
+.Menu {
+  width: 270px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 40px 32px;
+
+  border-radius: 8px;
+
+  background: url('/bg-sidebar-desktop.svg') center bottom;
+
+  .item {
+    display: flex;
+    gap: 16px;
+
+    &.active {
+      color: #000;
+
+      border: 1px solid #BDE2FF;
+      
+      background: #BDE2FF;
+    }
+
+    .index {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 36px;
+      height: 36px;
+
+      border: 1px solid #fff;
+      border-radius: 36px;
+
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+
+      color: #fff;
+
+      .description {
+        font-weight: 200;
+        font-size: 12px;
+      }
+
+      .name {
+        margin-top: 2px;
+
+        font-weight: bold;
+      }
+    }
+  }
+}
