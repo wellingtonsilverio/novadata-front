@@ -58,7 +58,7 @@ async function Form() {
             {body?.input && (
               <div className={styles.inputList}>
                 {body.input?.map(input => (
-                  <div className={styles.inputs}>
+                  <div key={input.title} className={styles.inputs}>
                     <div className={styles.messages}>
                       <label className={styles.label}>{input.title}</label>
                       {false && <span className={styles.error}>This field is required</span>}
@@ -73,7 +73,6 @@ async function Form() {
                 <div className={styles.planList}>
                   {body?.plan.map(plan => (
                     <div key={plan.id} className={styles.card}>
-                      {console.log(plan)}
                       <img src={`/${plan.heading}.svg`} alt={`${plan.heading} icon`} />
                       <div>
                         <h1 className={styles.h1}>{plan.heading}</h1>
@@ -93,7 +92,7 @@ async function Form() {
         ))}
         {formData.footer && <div className={styles.footer}>{formData.footer?.map(footerItem => {
           if (footerItem?.buttons) {
-            return <div className={styles.buttons}>{footerItem?.buttons?.map(button => <button className={[styles[button.button], styles.button].join(' ')} key={button.id}>{getButtonLabel(button.button)}</button>)}</div>
+            return <div key={footerItem.id} className={styles.buttons}>{footerItem?.buttons?.map(button => <button className={[styles[button.button], styles.button].join(' ')} key={button.id}>{getButtonLabel(button.button)}</button>)}</div>
           }
         })}</div>}
       </div>
