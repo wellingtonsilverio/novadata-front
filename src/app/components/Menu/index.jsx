@@ -1,7 +1,9 @@
 import styles from "./menu.module.scss";
 
+const API_URL = process.env.API_HOST || "https://strapi-ziqe.onrender.com"
+
 async function getFormData(step) {
-  const res = await fetch(`https://strapi-ziqe.onrender.com/api/forms/${step}?populate[0]=body&populate[1]=body.plan`)
+  const res = await fetch(`${API_URL}/api/forms/${step}?populate[0]=body&populate[1]=body.plan`)
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -12,7 +14,7 @@ async function getFormData(step) {
 }
 
 async function getMenuData() {
-  const res = await fetch('https://strapi-ziqe.onrender.com/api/menu?populate=*')
+  const res = await fetch(`${API_URL}/api/menu?populate=*`)
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -37,13 +39,18 @@ async function Menu() {
     return acc
   }, [])
 
-  return <div className={styles.Menu}>{menuData.map((item, index) => <div key={item.id} className={styles.item}>
-  <span className={styles.index}>{index + 1}</span>
-  <div className={styles.title}>
-    <span className={styles.description}>{item.description.replace('{n}', index + 1)}</span>
-    <span className={styles.name}>{item.heading}</span>
-  </div>
-</div>)}</div>;
+  return (
+    <div className={styles.Menu}>{menuData.map((item, index) => (
+      <div key={item.id} className={styles.item}>
+        <span className={styles.index}>{index + 1}</span>
+        <div className={styles.title}>
+          <span className={styles.description}>{item.description.replace('{n}', index + 1)}</span>
+          <span className={styles.name}>{item.heading}</span>
+        </div>
+      </div>
+    ))}
+    </div>
+  );
 }
 
 export default Menu;
