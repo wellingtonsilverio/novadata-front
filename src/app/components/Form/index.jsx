@@ -1,5 +1,5 @@
 import Menu from "../Menu";
-import styles from "./form.module.css";
+import styles from "./form.module.scss";
 
 function getPopulate(step) {
   switch (step) {

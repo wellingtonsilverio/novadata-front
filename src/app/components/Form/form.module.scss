@@ -14,72 +14,12 @@
 
   background: #FFF;
 
-  .Menu {
-    width: 270px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  
-    padding: 40px 32px;
-  
-    border-radius: 8px;
-  
-    background: url('/bg-sidebar-desktop.svg') center bottom;
-
-    .item {
-      display: flex;
-      gap: 16px;
-
-      &.active {
-        color: #000;
-
-        border: 1px solid #BDE2FF;
-        
-        background: #BDE2FF;
-      }
-
-      .index {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 36px;
-        height: 36px;
-
-        border: 1px solid #fff;
-        border-radius: 36px;
-
-        font-weight: bold;
-        color: #fff;
-      }
-
-      .title {
-        display: flex;
-        flex-direction: column;
-
-        color: #fff;
-
-        .description {
-          font-weight: 200;
-          font-size: 12px;
-        }
-
-        .name {
-          margin-top: 2px;
-
-          font-weight: bold;
-        }
-      }
-    }
-  }
-
   .content {
     width: 460px;
 
     display: flex;
     flex-direction: column;
-    
+
     margin: 0 auto;
 
     padding: 16px;
@@ -88,6 +28,7 @@
       color: #04285A;
       margin-bottom: 8px;
     }
+
     .subheading {
       font-size: 14px;
       font-weight: 400;
@@ -104,45 +45,49 @@
         .inputs {
           display: flex;
           flex-direction: column;
-  
+
           .messages {
             display: flex;
             justify-content: space-between;
 
             .label {
               margin-bottom: 8px;
-    
+
               font-size: 14px;
               color: #1A2C40;
             }
+
             .error {
               font-size: 14px;
               font-weight: 600;
               color: #DE384E;
             }
           }
-          
+
           .input {
             padding: 16px;
-  
+
             border: 1px solid #DBDADF;
             border-radius: 8px;
-  
+
             font-weight: 500;
             color: #101E41;
-  
+
             background: #fff;
           }
-  
+
           .input:hover {
             border: 1px solid #b7b5dc;
           }
-          .input:focus, .input:focus-visible {
+
+          .input:focus,
+          .input:focus-visible {
             border: 1px solid #514E93;
             outline: none;
           }
         }
       }
+
       .planList {
         display: flex;
         gap: 16px;
@@ -167,9 +112,11 @@
             font-size: 20px;
             color: #132241;
           }
+
           .price {}
         }
       }
+
       .choices {
         width: 100%;
 
@@ -189,13 +136,14 @@
         }
       }
     }
+
     .footer {
       margin-top: auto;
 
       .buttons {
         display: flex;
         justify-content: space-between;
-        
+
         .button {
           padding: 16px 24px;
 
@@ -208,6 +156,7 @@
 
           cursor: pointer;
         }
+
         .next {
           margin-left: auto;
 
@@ -215,6 +164,7 @@
 
           background: #174A8B;
         }
+
         .back {
           color: #174A8B;
         }

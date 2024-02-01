@@ -1,4 +1,4 @@
-import styles from "./menu.module.css";
+import styles from "./menu.module.scss";
 
 async function getFormData(step) {
   const res = await fetch(`http://localhost:1337/api/forms/${step}?populate[0]=body&populate[1]=body.plan`)
