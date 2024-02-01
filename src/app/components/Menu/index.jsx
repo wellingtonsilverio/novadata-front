@@ -1,7 +1,7 @@
 import styles from "./menu.module.scss";
 
 async function getFormData(step) {
-  const res = await fetch(`http://localhost:1337/api/forms/${step}?populate[0]=body&populate[1]=body.plan`)
+  const res = await fetch(`https://strapi-ziqe.onrender.com/api/forms/${step}?populate[0]=body&populate[1]=body.plan`)
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -12,7 +12,7 @@ async function getFormData(step) {
 }
 
 async function getMenuData() {
-  const res = await fetch('http://localhost:1337/api/menu?populate=*')
+  const res = await fetch('https://strapi-ziqe.onrender.com/api/menu?populate=*')
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary

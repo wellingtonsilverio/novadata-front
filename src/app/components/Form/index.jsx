@@ -15,7 +15,7 @@ function getPopulate(step) {
 
 async function getFormData(step) {
   const populate = getPopulate(step);
-  const res = await fetch(`http://localhost:1337/api/forms/${step}${populate}`)
+  const res = await fetch(`https://strapi-ziqe.onrender.com/api/forms/${step}${populate}`)
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
