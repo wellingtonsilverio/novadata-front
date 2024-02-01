@@ -1,0 +1,157 @@
+.Steps {
+  width: 460px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+
+  padding: 16px;
+
+  .heading {
+    color: #04285A;
+    margin-bottom: 8px;
+  }
+
+  .subheading {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .body {
+    margin-top: 32px;
+
+    .inputList {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+
+        .messages {
+          display: flex;
+          justify-content: space-between;
+
+          .label {
+            margin-bottom: 8px;
+
+            font-size: 14px;
+            color: #1A2C40;
+          }
+
+          .error {
+            font-size: 14px;
+            font-weight: 600;
+            color: #DE384E;
+          }
+        }
+
+        .input {
+          padding: 16px;
+
+          border: 1px solid #DBDADF;
+          border-radius: 8px;
+
+          font-weight: 500;
+          color: #101E41;
+
+          background: #fff;
+        }
+
+        .input:hover {
+          border: 1px solid #b7b5dc;
+        }
+
+        .input:focus,
+        .input:focus-visible {
+          border: 1px solid #514E93;
+          outline: none;
+        }
+      }
+    }
+
+    .planList {
+      display: flex;
+      gap: 16px;
+
+      .card {
+        flex: 1;
+        height: 160px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-between;
+
+        padding: 16px;
+
+        border: 1px solid #534C92;
+        border-radius: 8px;
+
+        .h1 {
+          margin-bottom: 4px;
+
+          font-size: 20px;
+          color: #132241;
+        }
+
+        .price {}
+      }
+    }
+
+    .choices {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      margin-top: 32px;
+      padding: 16px;
+
+      border-radius: 8px;
+
+      background: #F8F9FE;
+
+      .active {
+        color: #174A8B;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: auto;
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+
+      .button {
+        padding: 16px 24px;
+
+        border: none;
+        border-radius: 8px;
+
+        font-size: 18px;
+
+        background: none;
+
+        cursor: pointer;
+      }
+
+      .next {
+        margin-left: auto;
+
+        color: #fff;
+
+        background: #174A8B;
+      }
+
+      .back {
+        color: #174A8B;
+      }
+    }
+  }
+}

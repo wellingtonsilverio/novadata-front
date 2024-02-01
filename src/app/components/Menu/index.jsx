@@ -29,7 +29,6 @@ async function Menu() {
   const menuResponse = await getMenuData()
   const menuData = menuResponse?.data?.attributes?.list?.reduce((acc, item) => {
     if (item.heading === "SELECT PLAN") {
-      console.log(formData.body[0]?.plan)
       if (formData.body?.length > 0 && formData.body[0]?.plan?.length > 0) acc.push(item)
       return acc
     }
